@@ -41,7 +41,7 @@ namespace YP021.Pages
             //if (user != null)
             //{
             //    MessageBox.Show($"Добро пожаловать, {user.login}!", "Успех", MessageBoxButton.OK, MessageBoxImage.Information);
-            //MainWindow.init.OpenPages(MainWindow.pages.main);
+            MainWindow.init.OpenPages(MainWindow.pages.main);
             //}
             //else
             //{
