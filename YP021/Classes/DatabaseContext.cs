@@ -18,6 +18,8 @@ namespace YP021.Classes
         public DatabaseContext()
         {
             Database.EnsureCreated();
+            Students.Load();
+            StudGroups.Load();
         }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)

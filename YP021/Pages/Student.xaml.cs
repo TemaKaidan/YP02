@@ -90,7 +90,7 @@ namespace YP021.Pages
 
             foreach (var x in databaseContext.Students.ToList())
             {
-                parrent.Children.Add(new Elements.Student(x, groups)); // Передаем студента и список групп
+                parrent.Children.Add(new Elements.Student(x)); // Передаем студента и список групп
             }
         }
 
