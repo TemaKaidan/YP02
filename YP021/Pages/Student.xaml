@@ -9,6 +9,9 @@
       Title="Student">
 
     <Grid>
+        <Grid.Resources>
+            <ResourceDictionary Source="/Resource/BtnRes.xaml"/>
+        </Grid.Resources>
         <DockPanel>
             <StackPanel x:Name="MenuPanel" DockPanel.Dock="Left" Width="200">
                 <StackPanel.Background>
@@ -78,7 +81,11 @@
                 <ScrollViewer Margin="10,90,10,50" Background="#cacbcc">
                     <StackPanel x:Name="parrent"/>
                 </ScrollViewer>
+
+                <Button Style="{StaticResource BtnRedac}" x:Name="AddButton" Background="#FFD24B4B" Content="Добавить" VerticalAlignment="Bottom" HorizontalAlignment="Center" Height="40"
+                    Click="Click_Add" Width="120" Margin="5"/>
             </Grid>
         </DockPanel>
+        
     </Grid>
 </Page>

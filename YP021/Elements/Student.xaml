@@ -19,7 +19,7 @@
 
             <Button Style="{StaticResource BtnRedac}" Click="editButton_Click" x:Name="editButton" Content="Изменить" FontWeight="Bold" Foreground="White" BorderBrush="White" FontSize="16" Background="#FFD24B4B" Margin="5" VerticalAlignment="Top" Height="35"
         Width="110" HorizontalAlignment="Left"/>
-            <Button Style="{StaticResource BtnRedac}" x:Name="deleteButton" Content="Удалить" FontWeight="Bold" Foreground="White" BorderBrush="White" FontSize="16" Background="#FFD24B4B" Margin="5" VerticalAlignment="Top" Height="35"
+            <Button Style="{StaticResource BtnRedac}" Click="DeleteStudent_Click" x:Name="deleteButton" Content="Удалить" FontWeight="Bold" Foreground="White" BorderBrush="White" FontSize="16" Background="#FFD24B4B" Margin="5" VerticalAlignment="Top" Height="35"
         Width="110" HorizontalAlignment="Left"/>
         </StackPanel>
     </Grid>

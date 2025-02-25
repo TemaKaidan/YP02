@@ -17,6 +17,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using YP021.Classes;
 using YP021.Models;
+using YP021.Pages;
 
 namespace YP021.Elements
 {
@@ -32,8 +33,7 @@ namespace YP021.Elements
             surname.Content = "Фамилия: " + student.surname;
             name.Content = "Имя: " + student.name;
             lastname.Content = "Отчество: " + student.lastname;
-
-            // Ищем группу по ID
+            
             var group = groups.FirstOrDefault(g => g.id == student.studGroupId);
             studentGroupId.Content = "Группа: " + (group != null ? group.name : "Неизвестно");
 
@@ -43,6 +43,11 @@ namespace YP021.Elements
         private void editButton_Click(object sender, RoutedEventArgs e)
         {
             
+        }
+
+        private void DeleteStudent_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

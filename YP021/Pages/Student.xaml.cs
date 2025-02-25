@@ -93,5 +93,10 @@ namespace YP021.Pages
                 parrent.Children.Add(new Elements.Student(x, groups)); // Передаем студента и список групп
             }
         }
+
+        private void Click_Add(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
