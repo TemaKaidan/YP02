@@ -13,6 +13,7 @@ using System.Windows.Media.Animation;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using YP021.Classes;
 
 namespace YP021.Pages
 {
@@ -22,6 +23,8 @@ namespace YP021.Pages
     public partial class Student : Page
     {
         private static Main _instance;
+
+        private DatabaseContext databaseContext;
 
         private bool isMenuCollapsed = false;
 
@@ -74,6 +77,21 @@ namespace YP021.Pages
         public Student()
         {
             InitializeComponent();
+            databaseContext = new DatabaseContext();
+            CreateUI();
+
+
+        }
+
+        private void CreateUI()
+        {
+            // Загружаем список всех групп, чтобы использовать его при создании студентов
+            var groups = databaseContext.StudGroups.ToList();
+
+            foreach (var x in databaseContext.Students.ToList())
+            {
+                parrent.Children.Add(new Elements.Student(x, groups)); // Передаем студента и список групп
+            }
         }
     }
 }
