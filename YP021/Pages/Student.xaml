@@ -1,0 +1,84 @@
+﻿<Page x:Class="YP021.Pages.Student"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:YP021.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Student">
+
+    <Grid>
+        <DockPanel>
+            <StackPanel x:Name="MenuPanel" DockPanel.Dock="Left" Width="200">
+                <StackPanel.Background>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                        <GradientStop Color="#0060AC" Offset="0"/>
+                        <GradientStop Color="#E41613" Offset="1.2"/>
+                    </LinearGradientBrush>
+                </StackPanel.Background>
+                <Button Content="☰" Click="ToggleMenu" Foreground="White" HorizontalAlignment="Left" BorderBrush="Transparent" Width="50" Height="30" Background="Transparent">
+                    <Button.Style>
+                        <Style TargetType="Button">
+                            <Style.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="Background" Value="#7F9EA1A2"/>
+                                    <!-- Затемнение фона при наведении -->
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Button.Style>
+                </Button>
+                <Button Content="Студенты" Tag="Table1" Foreground="White" Background="Transparent" BorderBrush="Transparent" Margin="5" Height="25" FontWeight="Bold" FontSize="14">
+                    <Button.Style>
+                        <Style TargetType="Button">
+                            <Style.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="Background" Value="#7F9EA1A2"/>
+                                    <!-- Затемнение фона при наведении -->
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Button.Style>
+                </Button>
+                <Button Content="Таблица 2" Tag="Table2" Foreground="White" Background="Transparent" BorderBrush="Transparent" Margin="5" Height="25">
+                    <Button.Style>
+                        <Style TargetType="Button">
+                            <Style.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="Background" Value="#7F9EA1A2"/>
+                                    <!-- Затемнение фона при наведении -->
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Button.Style>
+                </Button>
+                <Button Content="Таблица 3" Tag="Table3" Foreground="White" Background="Transparent" BorderBrush="Transparent" Margin="5" Height="25">
+                    <Button.Style>
+                        <Style TargetType="Button">
+                            <Style.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="Background" Value="#7F9EA1A2"/>
+                                    <!-- Затемнение фона при наведении -->
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Button.Style>
+                </Button>
+            </StackPanel>
+            <Grid Background="#f0f2f0">
+                <Grid VerticalAlignment="Top" Height="75" Margin="5">
+                    <Border CornerRadius="25,25,25,25" Margin="0,0,0,0">
+                        <Border.Background>
+                            <SolidColorBrush Color="#0060AC" Opacity="1.0"/>
+                        </Border.Background>
+                    </Border>
+                    <Label Content="Информация о студентах" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold" Foreground="White" FontSize="20"/>
+                </Grid>
+                <ScrollViewer Margin="10,90,10,50" Background="#cacbcc">
+                    <StackPanel x:Name="parrent"/>
+                </ScrollViewer>
+            </Grid>
+        </DockPanel>
+    </Grid>
+</Page>
